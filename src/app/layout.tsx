@@ -7,6 +7,9 @@ import { SiteFooter } from '@/components/footer'
 export const metadata: Metadata = {
   title: 'João | Portfólio Full-Cycle',
   description: 'Portfólio de um desenvolvedor full-cycle experiente em...',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

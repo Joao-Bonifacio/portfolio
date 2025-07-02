@@ -1,34 +1,13 @@
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { getAllProjects } from '@/utils/content'
 
-const projects = [
-  {
-    title: 'Dashboard Financeiro',
-    slug: 'dashboard-financeiro',
-    description:
-      'Aplicação fullstack para controle de finanças com Next.js, NestJS, PostgreSQL e Recharts.',
-    techs: ['Next.js', 'NestJS', 'PostgreSQL', 'Recharts'],
-  },
-  {
-    title: 'Plataforma de Cursos',
-    slug: 'plataforma-cursos',
-    description:
-      'Sistema de ensino com autenticação, upload de vídeos e trilhas de aprendizado.',
-    techs: ['React', 'Node.js', 'MongoDB', 'Docker'],
-  },
-  {
-    title: 'Monitoramento de Serviços',
-    slug: 'monitoramento',
-    description:
-      'Infraestrutura com Prometheus, Grafana, OpenTelemetry e alertas automatizados.',
-    techs: ['Kubernetes', 'Grafana', 'Prometheus', 'OpenTelemetry'],
-  },
-]
+export default async function ProjectsPage() {
+  const projects = await getAllProjects()
 
-export default function ProjectsPage() {
   return (
-    <div className="container mx-auto max-w-5xl py-16 px-4 min-h-[80vh]">
+    <div className="container mx-auto max-w-5xl py-16 px-4 min-h-[78vh]">
       <h1 className="mb-8 text-4xl font-bold tracking-tight text-center">
         Projetos
       </h1>
@@ -38,7 +17,7 @@ export default function ProjectsPage() {
           <Link key={project.slug} href={`/projects/${project.slug}`}>
             <Card className="hover:shadow-lg transition-shadow duration-200 cursor-pointer">
               <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+                <CardTitle>{project.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4 text-sm">

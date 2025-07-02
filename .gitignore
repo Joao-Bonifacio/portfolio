@@ -41,4 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 # misc
-notes.md
+/tmp
+z.json
+z.md

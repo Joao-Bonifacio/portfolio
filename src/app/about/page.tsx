@@ -1,55 +1,46 @@
-import Image from 'next/image'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sobre Mim',
+  title: 'Sobre | João Junior',
   description:
-    'Conheça mais sobre minha jornada como desenvolvedor full-cycle.',
+    'Saiba mais sobre mim, minha trajetória como desenvolvedor e minhas principais competências.',
 }
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl py-12">
-      <div className="flex flex-col-reverse items-start gap-8 md:flex-row">
-        <div className="flex-1 space-y-4">
-          <h1 className="text-4xl font-bold">Sobre Mim</h1>
-          <p className="text-lg text-muted-foreground">
-            Olá! Sou um desenvolvedor Full-Cycle apaixonado por criar soluções
-            de software eficientes e escaláveis que resolvem problemas reais.
-            Com uma base sólida em Frontend, Backend, DevOps, Infraestrutura, e
-            QA (qualidade de software), eu desenvolvo ambientes dinâmicos onde
-            posso aplicar meu conhecimento em todo o ciclo de vida do software.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Minha jornada na tecnologia começou com uma curiosidade sobre como
-            as aplicações web funcionavam nos bastidores. Essa curiosidade
-            rapidamente se transformou em uma carreira, onde tive a oportunidade
-            de trabalhar com tecnologias de ponta como TypeScript, React,
-            Next.js para o frontend, e NestJS para o backend.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Além do código, sou um grande defensor de práticas de DevOps
-            robustas. Tenho experiência prática com Docker e Kubernetes para
-            containerização e orquestração, e na construção de pipelines de
-            CI/CD que garantem entregas de software rápidas e confiáveis.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Quando não estou programando, gosto de explorar novas tecnologias,
-            contribuir para projetos de código aberto e escrever sobre minhas
-            descobertas no meu blog.
-          </p>
-        </div>
-        <div className="md:w-1/3">
-          <Image
-            src="/coding.png"
-            alt="Minha foto"
-            width={400}
-            height={400}
-            className="rounded-full object-cover"
-            priority
-          />
-        </div>
-      </div>
+    <div className="container mx-auto max-w-3xl py-16 px-4 min-h-[78vh]">
+      <h1 className="text-4xl font-bold mb-6 tracking-tight">Sobre mim</h1>
+
+      <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        Olá! Meu nome é{' '}
+        <span className="font-semibold text-foreground">João Junior</span> e sou
+        desenvolvedor full stack com experiência em frontend, backend, DevOps e
+        infraestrutura. Atuo com tecnologias modernas como{' '}
+        <strong>TypeScript</strong>, <strong>React</strong>,{' '}
+        <strong>Next.js</strong>, <strong>NestJS</strong>,
+        <strong> Docker</strong>, <strong>Kubernetes</strong> e bancos de dados
+        relacionais e não relacionais.
+      </p>
+
+      <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        Tenho paixão por construir soluções escaláveis, bem estruturadas e com
+        foco em performance e boas práticas de código. Gosto de me envolver em
+        todo o ciclo de desenvolvimento — da concepção à produção — e tenho
+        familiaridade com testes, automações (CI/CD), observabilidade e deploy
+        em ambientes cloud.
+      </p>
+
+      <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+        Além disso, mantenho um mindset de aprendizado contínuo e valorizo a
+        colaboração em equipes ágeis, comunicação clara e foco em entregar valor
+        real ao usuário.
+      </p>
+
+      <p className="text-muted-foreground text-lg leading-relaxed">
+        Este portfólio é um reflexo do meu trabalho, comprometimento e evolução
+        como profissional. Fique à vontade para explorar meus projetos e entrar
+        em contato.
+      </p>
     </div>
   )
 }
